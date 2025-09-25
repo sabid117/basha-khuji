@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "2 BHK in Dhanmondi",
+    "rent": "20,000 BDT/month",
+    "rentValue": 20000,
+    "areaSqft": 950,
+    "location": "Dhanmondi",
+    "desc": "Spacious flat with 2 bedrooms, near shopping center.",
+    "img": "/home1.jpg",
+    "category": "Apartments"
+  },
+  {
+    "id": 2,
+    "title": "1 BHK in Mirpur",
+    "rent": "12,000 BDT/month",
+    "rentValue": 12000,
+    "areaSqft": 650,
+    "location": "Mirpur",
+    "desc": "Affordable flat near Metro station.",
+    "img": "/home2.avif",
+    "category": "Apartments"
+  },
+  {
+    "id": 3,
+    "title": "3 BHK in Gulshan",
+    "rent": "45,000 BDT/month",
+    "rentValue": 45000,
+    "areaSqft": 1350,
+    "location": "Gulshan",
+    "desc": "Luxury apartment with modern facilities.",
+    "img": "/home3.avif",
+    "category": "Apartments"
+  },
+  {
+    "id": 4,
+    "title": "Sublet in Banani",
+    "rent": "8,000 BDT/month",
+    "rentValue": 8000,
+    "areaSqft": 300,
+    "location": "Banani",
+    "desc": "Single room sublet for female, utilities included.",
+    "img": "/home1.jpg",
+    "category": "Sublets"
+  },
+  {
+    "id": 5,
+    "title": "Office Space in Motijheel",
+    "rent": "60,000 BDT/month",
+    "rentValue": 60000,
+    "areaSqft": 1200,
+    "location": "Motijheel",
+    "desc": "1200 sq ft office space in prime commercial area.",
+    "img": "/home1.jpg",
+    "category": "Offices"
+  },
+  {
+    "id": 6,
+    "title": "Shop in New Market",
+    "rent": "25,000 BDT/month",
+    "rentValue": 25000,
+    "areaSqft": 300,
+    "location": "New Market",
+    "desc": "300 sq ft shop with high footfall location.",
+    "img": "/home1.jpg",
+    "category": "Shops"
+  }
+]
