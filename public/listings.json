@@ -40,7 +40,7 @@
     "areaSqft": 300,
     "location": "Banani",
     "desc": "Single room sublet for female, utilities included.",
-    "img": "/home1.jpg",
+    "img": "/home4.webp",
     "category": "Sublets"
   },
   {
@@ -51,7 +51,7 @@
     "areaSqft": 1200,
     "location": "Motijheel",
     "desc": "1200 sq ft office space in prime commercial area.",
-    "img": "/home1.jpg",
+    "img": "/home5.webp",
     "category": "Offices"
   },
   {
@@ -62,7 +62,7 @@
     "areaSqft": 300,
     "location": "New Market",
     "desc": "300 sq ft shop with high footfall location.",
-    "img": "/home1.jpg",
+    "img": "/home6.jpg",
     "category": "Shops"
   }
 ]

@@ -1,45 +1,45 @@
-import { Button, TextField } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Hero() {
-  const handleSearch = (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    console.log(formData.get("searchTerm"));
-  }
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      window.open(`/listings?search=${encodeURIComponent(searchTerm)}`, "_blank");
+    }
+  };
+
   return (
     <div
-      className="hero min-h-[70vh] sm:min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('/bg-img.jpg')" }}
+      className="relative h-screen bg-cover bg-center"
+      style={{ backgroundImage: "url('/hero-bg.jpg')" }}
     >
-      <div className="hero-overlay bg-black/50"></div>
-
-      <div className="hero-content text-center text-white px-4">
-        <div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="relative z-10 flex items-center justify-center h-full px-4">
+        <div className="w-full max-w-xl text-center text-white">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-2">
             Find Your Perfect Rental in Dhaka
           </h1>
-          <p className="py-4 md:py-6 text-base sm:text-lg">
+          <p className="text-lg sm:text-xl mb-6">
             Connecting tenants and house owners with ease.
           </p>
-          <div className="join flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-0">
-            <form onSubmit={handleSearch}>
-              <TextField
-                name="searchTerm"
-                label="Search"
-                id="outlined-size-small"
-                defaultValue="2xl"
-                size="small"
-                variant="filled"
-                color="primary"
-                className="bg-white rounded-b-field"
-              />
-              <Button type="submit" variant="contained" color="primary" size="large">
-              Search
-            </Button>
-            </form>
-            
-          </div>
+          <form onSubmit={handleSearch} className="flex w-full">
+            <input
+              type="text"
+              name="searchTerm"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder="Search"
+              className="w-full h-14 px-4 rounded-l-md bg-white text-black focus:outline-none"
+            />
+            <button
+              type="submit"
+              className="h-14 px-6 bg-blue-400 text-white font-semibold rounded-r-md hover:bg-blue-700 transition"
+            >
+              SEARCH
+            </button>
+          </form>
         </div>
       </div>
     </div>
