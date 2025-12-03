@@ -1,15 +1,23 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAQ6bkkwzwvtosQeLXhA3yLDoQjViYqJ64",
-  authDomain: "basha-khuji-f983f.firebaseapp.com",
-  projectId: "basha-khuji-f983f",
-  storageBucket: "basha-khuji-f983f.appspot.com",
-  messagingSenderId: "530721890908",
-  appId: "1:530721890908:web:5ba94387a55f0f3916bc99",
-  measurementId: "G-8C0090TSFL"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
+console.log("VITE_API_KEY:", import.meta.env.VITE_API_KEY);
+console.log("firebaseConfig:", firebaseConfig);
+console.log("getApps().length before init:", getApps().length);
+
 const app = initializeApp(firebaseConfig);
+console.log("app.name:", app.name);
+console.log("app.options.projectId:", app.options?.projectId);
+
 export const auth = getAuth(app);
+export { firebaseConfig };

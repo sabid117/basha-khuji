@@ -1,3 +1,4 @@
+// src/router/router.jsx
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home/Home.jsx";
 import ListingDetails from "../pages/ListingDetails/ListingDetails.jsx";
@@ -6,8 +7,10 @@ import Chat from "../pages/Chat/Chat.jsx";
 import Error from "../pages/Error/Error.jsx";
 import SignUp from "../pages/SignUp/SignUp.jsx";
 import SignIn from "../pages/SignIn/SignIn.jsx";
+import Profile from "../pages/Profile/Profile.jsx";
 import Navbar from "../components/Navbar.jsx";
 import ProtectedRoute from "../components/ProtectedRoute.jsx";
+import Footer from "../components/Footer.jsx";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +47,17 @@ const router = createBrowserRouter([
         <Navbar />
         <ProtectedRoute>
           <Chat />
+        </ProtectedRoute>
+      </>
+    ),
+  },
+  {
+    path: "/profile",
+    element: (
+      <>
+        <Navbar />
+        <ProtectedRoute>
+          <Profile />
         </ProtectedRoute>
       </>
     ),
