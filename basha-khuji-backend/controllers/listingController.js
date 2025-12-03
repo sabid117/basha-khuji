@@ -1,12 +1,20 @@
-const mongoose = require('mongoose');
+const Listing = require('../models/Listing');
 
-const listingSchema = new mongoose.Schema({
-  title: String,
-  location: String,
-  price: Number,
-  description: String,
-  landlordId: mongoose.Schema.Types.ObjectId,
-  createdAt: { type: Date, default: Date.now }
-});
+exports.createListing = async (req, res) => {
+  try {
+    const listing = new Listing(req.body);
+    await listing.save();
+    res.status(201).json(listing);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
 
-module.exports = mongoose.model('Listing', listingSchema);
+exports.getListings = async (req, res) => {
+  try {
+    const listings = await Listing.find();
+    res.json(listings);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
